@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="369px" height="48px" viewBox="0 0 369 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#404549" offset="0%"></stop>
+            <stop stop-color="#30363B" offset="100%"></stop>
+        </linearGradient>
+        <path d="M47,653 L368,653 C381.254834,653 392,663.745166 392,677 L392,677 C392,690.254834 381.254834,701 368,701 L47,701 C33.745166,701 23,690.254834 23,677 L23,677 C23,663.745166 33.745166,653 47,653 Z" id="path-2"></path>
+        <filter x="-0.3%" y="-2.1%" width="100.5%" height="104.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.0670289855 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Final-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-XS-Max-Copy-38" transform="translate(-23.000000, -653.000000)" fill-rule="nonzero">
+            <g id="Rectangle">
+                <use fill-opacity="0.38" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
