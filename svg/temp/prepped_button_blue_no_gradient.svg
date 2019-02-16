@@ -3,15 +3,9 @@
     <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
     <title>Rectangle</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.4668533%" id="linearGradient-1">
-            <stop stop-color="#4582FC" offset="0%"></stop>
-            <stop stop-color="#2263DF" offset="100%"></stop>
-        </linearGradient>
-    </defs>
     <g id="HackNYU" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPhone-XS-Max-Copy-41" transform="translate(-24.000000, -721.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
-            <g id="Big-Button-Copy-4" transform="translate(22.000000, 721.000000)">
+        <g id="iPhoneXSMaxCopy41" transform="translate(-24.000000, -721.000000)" fill="#4582FC" fill-rule="nonzero">
+            <g id="BigButtonCopy4" transform="translate(22.000000, 721.000000)">
                 <path d="M32,6.32591152e-17 L341,3.55271368e-15 C357.568542,5.09121799e-16 371,13.4314575 371,30 L371,30 C371,46.5685425 357.568542,60 341,60 L32,60 C15.4314575,60 2,46.5685425 2,30 L2,30 C2,13.4314575 15.4314575,3.04359188e-15 32,0 Z" id="Rectangle"></path>
             </g>
         </g>
