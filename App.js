@@ -8,7 +8,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Alert, Button, Platform, StyleSheet, Text, View} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -23,8 +23,14 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to CARDINAL</Text>
-        <Text style={styles.instructions}>To get started, press the ready button!</Text>
+        <Text style={styles.instructions}>Dave is literally trash at league of legends</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+
+        <Button onPress={() => {Alert.alert('You tapped the button!');}}
+          title="Learn More"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+          />
       </View>
     );
   }
