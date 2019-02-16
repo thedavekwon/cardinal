@@ -1,15 +1,16 @@
 /**
  *
  * React CARDINAL
+ * React-native-svg
+ * React-native-navigatoin
  * 
- * 
- *
  */
 
 import React, {Component} from 'react';
 
-import {Button, Alert, Platform, StyleSheet, Text, View, Image} from 'react-native';
+import {TouchableOpacity,Button, Alert, Platform, StyleSheet, Text, View, Image} from 'react-native';
 import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
+
 
 class HomeScreen extends React.Component {
   render() {
@@ -37,8 +38,31 @@ class HomeScreen extends React.Component {
 class DetailsScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
+      <View style={{    
+        
+        backgroundColor: '#000000',
+        justifyContent: 'center',
+        alignItems: 'center',}}>
+          <Image
+            style={{
+            
+            width: "100%", height: "100%" }}
+            source={require('../assets/Rectangle.png')}
+            />
+        
+          <Button
+            style={{position:"absolute"}}
+            title="Return Home"
+            onPress={() => {
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'Home' })
+                ],
+              }))
+            }}
+          /> 
+        
       </View>
     );
   }  
@@ -50,6 +74,9 @@ const AppNavigator = createStackNavigator({
   },
   Details:{
     screen: DetailsScreen,
+    navigationOptions: {
+      header: null,
+    }
   },
 },{ 
   initialRouteName: 'Home',
