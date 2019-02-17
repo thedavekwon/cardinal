@@ -14,7 +14,7 @@ import { createAppContainer, createStackNavigator, StackActions, NavigationActio
 
 
 export default class HomeScreen extends React.Component {
-  
+  state = {runmode:'FAT BURN',goalmode:'150 CAL'}
 
   render() {
  
@@ -23,6 +23,22 @@ export default class HomeScreen extends React.Component {
      
        <ImageBackground source={require('./assets/main_bg.png')} style={{width: '101%', height: '100%',marginTop:'0%',justifyContent: 'center',
       alignItems: 'center'}}>
+      <View style={{flex:1,flexDirection: 'row',justifyContent:'space-between',marginTop:'10%'}}>
+         <View ><Image  source={require('./assets/phoneshake.png')}/></View>
+          <View ><Image  source={require('./assets/choice.png')}/></View>
+      </View> 
+        <Image style={styles.button_rn,{bottom:'-21%'}} source={require('./assets/Main_Dock.png')}/>
+
+        <View style={{flex:1,flexDirection: 'row',alignContent:'center'}}>
+          <View style={{marginLeft:'-20%',bottom:'-37%'}} >
+                  <Image source={require('./assets/icon_program.png')}/>
+                  <Text style={{position:'absolute',width:150,color:'white',paddingLeft:'25%'}}>{this.state.runmode}</Text>
+          </View>
+          <View style={{marginLeft:'35%',marginRigth:'30%',bottom:'-38%'}}>
+                  <Image style={{position:'absolute'}} source={require('./assets/icon_goal.png')}/>
+                 <Text style={{position:'absolute',width:150,color:'white',paddingLeft:'25%'}}>{this.state.goalmode}</Text>
+          </View>
+        </View>
        <TouchableHighlight 
                 
                   style={styles.submit}
@@ -39,13 +55,13 @@ export default class HomeScreen extends React.Component {
       </TouchableHighlight>
 
         <View style={styles.bottom_menu}>
-           <TouchableHighlight style={[styles.menu_element,{bottom:'73%',marginLeft:'12%'}]}>
+           <TouchableHighlight style={[styles.menu_element,{bottom:'77%',marginLeft:'13%'}]}>
                 <Image  source={require('./assets/progress.png')}/>
             </TouchableHighlight>
-           <TouchableHighlight style={[styles.menu_element,{bottom:'70%',marginLeft:'45%'}]}>
+           <TouchableHighlight style={[styles.menu_element,{bottom:'73%',marginLeft:'47%'}]}>
                 <Image  source={require('./assets/run.png')}/>
             </TouchableHighlight>     
-           <TouchableHighlight  style={[styles.menu_element,{marginLeft:'79%'}]} >
+           <TouchableHighlight  style={[styles.menu_element,{bottom:'76%',marginLeft:'79%'}]} >
                 <Image source={require('./assets/gear.png')}/>
             </TouchableHighlight>
         </View>
@@ -91,5 +107,7 @@ const styles = StyleSheet.create({
       resizeMode:"contain",
       resizeMethod:'scale',
   },
+
 });
+
 
