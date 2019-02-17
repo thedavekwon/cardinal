@@ -3,6 +3,11 @@ package com.cardinal;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.spotify.sdk.android.authentication.RNSpotifyPackage;
+import com.lufinkey.react.eventemitter.RNEventEmitterPackage;
+import com.horcrux.svg.SvgPackage;
+import com.guichaguri.trackplayer.TrackPlayer;
+import com.reactlibrary.RNThreadPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -24,6 +29,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSpotifyPackage(),
+            new RNEventEmitterPackage(),
+            new SvgPackage(),
+            new TrackPlayer(),
+            new RNThreadPackage(),
             new RNGestureHandlerPackage()
       );
     }
