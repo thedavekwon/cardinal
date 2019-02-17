@@ -8,7 +8,7 @@ Cardinal asks questions about your running background and goals, hooks into your
 
 ## Purpose
 
-Running is an important part of cardiovascular health. However, research has shown that 75% of people aren't sure whether they're running too much or too little to reach their goals. If too little, there might not be enough effect, and if too much, there might be risk of injuries.
+60 million Americans go running every year to improve their physique and well-being. However, research has shown that 75% of people aren't sure whether they're running too much or too little to reach their goals. If too little, there might not be enough effect, and if too much, there might be risk of injuries.
 
 In addition, users tend to respond to fast-paced music by speeding up, and slower-paced music by slowing down. Currently available exercise apps take advantage of this by offering DJ-curated playlists to help users meet their running goals, but according to our research, more than 80% of users don't want to listen to DJ-curated playlists, especially people whose tastes fall outside of the US top-40 hits, and they don't want to feel pigeonholed into certain demographics. Polls and interviews we conducted during the hackathon demonstrates that people want to listen to their own music when they're running.
 
@@ -16,13 +16,27 @@ Furthermore, users often take up running with goals in mind: for instance, incre
 
 ## Functionality
 
-When the user starts an exercise session on the app, it will display a live graph of their heart rate, start an exercise stopwatch, and begin playback of a playlist tailored to the chosen workout. The tracks are picked based on their length and BPM.
+When the user starts an exercise session on the app, the app offers the following features: 
+* a real-time graph of their heart rate,
+* start an exercise stopwatch,
+* begin playback of a playlist tailored to the chosen workout which is generated on the fly from their own music library based on the length of the work out and user's goal and their target heart rate.
 
-## Dependencies
+## Implementation
 
 This project uses react-native, react-native-elements, react-native-svg, react-native-spotify,  react-navigation, rn-apple-healthkit, d3-shape, and expo.
 
-Use of the app requires a Spotify account and Apple Watch.
+### How we generate playlists
+
+We generate playlists based on a pre-defined workout format, which lets us choose tracks based on their length and BPM, such that the flow of the currently playing BPM follows the target BPM for the runner.
+
+### How we track heart rate
+
+The rn-apple-healthkit module for react-native lets us access HealthKit data from the end user's Apple Watch, which is updated live  during a workout session with heart rate data. We query the Health app on the user's iPhone to obtain a fresh heart rate figure every five seconds.
+
+### How we play songs from Spotify
+
+This app uses the react-native-spotify library from GitHub to access Spotify's Player API and play back music based on specified URIs.
+
 
 ## Challenges
 
@@ -34,7 +48,7 @@ Furthermore, since we developed our app in React Native, we needed a module that
 
 In the future, we'd like to implement:
 
-* More fully-featured Spotify module with refresh token implementation
+* More fully-featured Spotify module with refresh token implementation and Get Audio Features, which would improve automated track sorting based on BPM.
 * Classification modules for identifying which tracks from the user's library are most effective at keeping pace with the exercise
 * Machine learning module for adapting exercises across sessions of the app, as their body responds differently to running
 * Fleshed-out data visualization tools for user activity, including pedometer and distance traveled
