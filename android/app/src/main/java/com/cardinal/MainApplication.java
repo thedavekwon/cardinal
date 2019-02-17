@@ -3,6 +3,7 @@ package com.cardinal;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.spotify.sdk.android.authentication.RNSpotifyPackage;
 import com.lufinkey.react.eventemitter.RNEventEmitterPackage;
 import com.horcrux.svg.SvgPackage;
@@ -29,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new VectorIconsPackage(),
             new RNSpotifyPackage(),
             new RNEventEmitterPackage(),
             new SvgPackage(),

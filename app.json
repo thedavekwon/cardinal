@@ -1,4 +1,6 @@
 {
+  "name": "cardinal",
+  "displayName": "cardinal",
   "expo": {
     "name": "cardinal_actual",
     "description": "No description",
