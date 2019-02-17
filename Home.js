@@ -61,10 +61,10 @@ export default class HomeScreen extends React.Component {
       </TouchableHighlight>
 
         <View style={styles.bottom_menu}>
-           <TouchableHighlight style={[styles.menu_element,{bottom:'73%',marginLeft:'12%'}]}>
+           <TouchableHighlight style={[styles.menu_element,{bottom:'77%',marginLeft:'13%'}]}>
                 <Image  source={require('./assets/progress.png')}/>
             </TouchableHighlight>
-           <TouchableHighlight style={[styles.menu_element,{bottom:'70%',marginLeft:'45%'}]}>
+           <TouchableHighlight style={[styles.menu_element,{bottom:'73%',marginLeft:'47%'}]}>
                 <Image  source={require('./assets/run.png')}/>
             </TouchableHighlight>
            <TouchableHighlight  style={[styles.menu_element,{marginLeft:'79%'}]} >
@@ -109,4 +109,5 @@ const styles = StyleSheet.create({
   button_rn:{
     resizeMode:"contain",
   },
+
 });
