@@ -5,30 +5,24 @@
 This project was created by Cooper Union students Do Hyung Kwon, Minyoung Na, Elvin Hu, and Evan Bubniak as part of the hackNYU 2019 hackathon, between February 15 and February 17.
 
 Cardinal asks questions about your running background and goals, hooks into your Spotify library, and generates workout playlists based on your running goals.
-__
 
 ## Purpose
 
-Running is an important part of cardiovascular health. Users often take up running with goals in mind: for instance, increasing their endurance, lowering their resting heart rate, or burning calories.
+Running is an important part of cardiovascular health. However, research has shown that 75% of people aren't sure whether they're running too much or too little to reach their goals. If too little, there might not be enough effect, and if too much, there might be risk of injuries.
 
-Research has shown that 75% of people aren't sure whether they're running too much or too little to reach their goals. Furthermore, users tend to respond to fast-paced music by speeding up, and slower-paced music by slowing down. Currently available exercise apps on the market take advantage of this by offering DJ-curated playlists to help users meet their running goals.
+In addition, users tend to respond to fast-paced music by speeding up, and slower-paced music by slowing down. Currently available exercise apps take advantage of this by offering DJ-curated playlists to help users meet their running goals, but according to our research, more than 80% of users don't want to listen to DJ-curated playlists, especially people whose tastes fall outside of the US top-40 hits, and they don't want to feel pigeonholed into certain demographics. Polls and interviews we conducted during the hackathon demonstrates that people want to listen to their own music when they're running.
 
-But users don't want to listen to DJ-curated playlists, especially people whose tastes fall outside of the US top-40 hits. User research we conducted during the hackathon demonstrates that people want to listen to their own music when they're running.
-
-Our team identified an unmet need for a fitness app that hooked into the user's already-existing Spotify My Music Library, 
+Furthermore, users often take up running with goals in mind: for instance, increasing their endurance, lowering their resting heart rate, or burning calories, but they don't know how to reach their goals. That's why we're here to help. 
 
 ## Functionality
 
 When the user starts an exercise session on the app, it will display a live graph of their heart rate, start an exercise stopwatch, and begin playback of a playlist tailored to the chosen workout. The tracks are picked based on their length and BPM.
-__
 
 ## Dependencies
 
 This project uses react-native, react-native-elements, react-native-svg, react-native-spotify,  react-navigation, rn-apple-healthkit, d3-shape, and expo.
 
 Use of the app requires a Spotify account and Apple Watch.
-
-__
 
 ## Challenges
 
