@@ -1,5 +1,4 @@
-package com.cardinal;
-
+package com.sampleproject;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -10,6 +9,18 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "cardinal";
+        return "sampleproject";
     }
+<<<<<<< HEAD
+=======
+    @Override
+    protected ReactActivityDelegate createReactActivityDelegate() {
+        return new ReactActivityDelegate(this, getMainComponentName()) {
+        @Override
+         protected ReactRootView createRootView() {
+            return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
+>>>>>>> e73ede5fe2bf2edf11727eacab0e7d7caae8a680
 }
