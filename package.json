@@ -21,7 +21,7 @@
     "react-timer-mixin": "^0.13.4",
     "reactotron-react-native": "^2.1.5",
     "rn-apple-healthkit": "^0.6.4",
-    "yarn": "^1.13.0"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
